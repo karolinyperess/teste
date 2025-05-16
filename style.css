@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  font-family: 'Comic Sans MS', cursive;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 20vh;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f91;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff4e71;
+}
+
+.mensagem-escondida {
+  margin-top: 20px;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.mensagem-visivel {
+  opacity: 1;
+}
+
+.coracoes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.coracao {
+  position: absolute;
+  color: red;
+  font-size: 24px;
+  animation: subir 6s linear infinite;
+}
+
+@keyframes subir {
+  0% {
+    bottom: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
